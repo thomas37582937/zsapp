@@ -1,0 +1,58 @@
+{
+  "name": "zsapp",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.8.2",
+    "jest": "^23.1.0",
+    "jest-react-native": "^18.0.0",
+    "prettier": "^1.13.2",
+    "react-test-renderer": "16.3.1",
+    "teaset": "^0.5.8"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "gen": "node ./tools/generator/index.js"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "lint-staged": {
+    "ignore": [
+      "package.json"
+    ],
+    "linters": {
+      "*.{js,jsx}": [
+        "eslint --no-ignore --fix",
+        "git add --force"
+      ],
+      "*.{json,md}": [
+        "prettier --write",
+        "git add --force"
+      ]
+    }
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "16.3.1",
+    "react-native": "~0.55.2",
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^2.0.4",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.9.1",
+    "redux-thunk": "^2.3.0"
+  }
+}
